@@ -46,7 +46,7 @@ app.get("/", async (req, res) => {
     const { findResult } = await connectInsertAndFind();
 
     // Send both insert and find results as part of the response
-    res.json({ data: "hello world 2", findResult });
+    res.json({ data: "hello", findResult: findResult });
   } catch (error) {
     res.status(500).json({ error: "Internal Server Error" });
   }
